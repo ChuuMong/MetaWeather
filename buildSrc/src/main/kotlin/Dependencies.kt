@@ -10,7 +10,10 @@ object Versions {
 
     const val appComapt = "1.1.0"
     const val ktx = "1.0.2"
+
     const val constraintLayout = "1.1.3"
+    const val recyclerview = "1.0.0"
+
     const val koin = "2.0.1"
 
     const val reftofit = "2.6.1"
@@ -18,6 +21,8 @@ object Versions {
     const val gson = "2.8.5"
     const val rxjava = "2.2.12"
     const val rxAndroid = "2.1.1"
+
+    const val glide = "4.9.0"
 }
 
 object Dependencies {
@@ -29,7 +34,9 @@ object Dependencies {
 
     const val ktx = "androidx.core:core-ktx:${Versions.ktx}"
 
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val constraintLayout =
+        "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
 
     const val koin = "org.koin:koin-android:${Versions.koin}"
     const val koinViewModel = "org.koin:koin-android-viewmodel:${Versions.koin}"
@@ -45,4 +52,7 @@ object Dependencies {
 
     const val rxjava = "io.reactivex.rxjava2:rxjava:${Versions.rxjava}"
     const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
+
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    const val glideComplier = "com.github.bumptech.glide:compiler:${Versions.glide}"
 }

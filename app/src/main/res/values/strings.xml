@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MetaWeather</string>
+
+    <string name="app_title">Local Weather</string>
+
+    <string name="weather_local">Local</string>
+    <string name="weather_today">Today</string>
+    <string name="weather_tomorrow">Tomorrow</string>
+
+    <string name="format_temp">%d℃</string>
+    <string name="format_humidity">%d%%</string>
 </resources>
