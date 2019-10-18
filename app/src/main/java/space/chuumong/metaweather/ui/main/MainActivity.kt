@@ -48,10 +48,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), SwipeRefreshLayout.OnR
             binding.progress.isVisible = true
         }
 
+        weatherAdapter.clear()
         weatherViewModel.getWeathers(SEARCH_QUERY, object : Result<List<WeatherInfo>> {
             override fun onSuccess(result: List<WeatherInfo>) {
                 binding.progress.isVisible = false
                 binding.layoutSwipe.isRefreshing = false
+                isSwipeRefresh = false
 
                 weatherAdapter.addAll(result)
             }
@@ -59,6 +61,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), SwipeRefreshLayout.OnR
             override fun onFail(t: Throwable) {
                 binding.progress.isVisible = false
                 binding.layoutSwipe.isRefreshing = false
+                isSwipeRefresh = false
 
                 showErrorDialog(t.message)
             }
@@ -67,7 +70,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), SwipeRefreshLayout.OnR
 
     override fun onRefresh() {
         isSwipeRefresh = true
-        weatherAdapter.clear()
+
         getWeathers()
     }
 }
